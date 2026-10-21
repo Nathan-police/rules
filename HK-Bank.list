@@ -1,0 +1,212 @@
+# ============================================================
+# HK-Bank 香港银行 / 金融规则集 (核验修订版 v3)
+# 用途: OpenClash / Clash 规则集 (rule-provider, behavior: classical)
+# 来源: 手工整理 + hk-bank-new.list + 用户提供内容
+# 核验: 双 DoH(CF/Google) + NS + MX/TXT/SPF + CAA + 官网标题
+# 修订: 删除 31 个 NXDOMAIN/臆造/错误归属域名; 修正归属; 标注存疑项
+# 注释约定:
+#   无标注     = 已确认提供服务的官网
+#   防御注册/备用 = 归属明确(NS/MX/CAA) 但不提供 Web 服务或仅跳转
+#   未核实     = 仅能解析, 归属未证实 (规则集内保留无害)
+# ============================================================
+
+# ############ 已删除(查无实据/归属错误) ############
+# hangsengreward.com  hangsengmastercard.com  bochkreward.com
+# bochk-stock.com     bochk-pay.com           scbassets.com
+# screward.com        ocbcreward.com          ncbreward.com
+# cncbireward.com     fubon-cards.com.hk      bea-api.com
+# citi-api.com        ap-wallet-msp.hk        shanghaihb.com
+# chiyu-bank.com      ccba.com.hk             bocpay.com.hk
+# indbank.com.hk      hsbcmpf.com.hk          payme.com.hk
+# fps.hk              bea.com                 bea.com.hk
+# hase.com            nanyangbank.com         alipay.com.hk
+# livi.hk             we-stats.com            hk.cebbank.com
+# scb.com.hk (HKDNR 停放, 归属不明)
+# #################################################
+
+# ===== 发钞行 / 传统三大行 =====
+# 汇丰 HSBC
+DOMAIN-SUFFIX,hsbc.com.hk          # 香港官网及个人银行
+DOMAIN-SUFFIX,hsbc.com             # 全球官网
+DOMAIN-SUFFIX,hsbcnet.com          # 商业网上理财 (HSBCNet)
+DOMAIN-SUFFIX,trkd-hs.com          # 数据追踪与行情服务
+DOMAIN-SUFFIX,hbap.com             # 汇丰亚太区内部服务
+DOMAIN-SUFFIX,hsbcpremier.com      # 尚玉/Premier (汇丰自持, 防御注册/无 Web)
+DOMAIN-SUFFIX,hsbcprivatebank.com  # 私人银行
+DOMAIN-SUFFIX,hsbcinsurance.com.hk # 汇丰保险 (汇丰自持, 防御注册/无 Web)
+DOMAIN-SUFFIX,hsbc.com.cn          # 汇丰中国
+DOMAIN-SUFFIX,hsbc                 # HSBC 品牌顶级域 (.hsbc)
+# 恒生银行 Hang Seng Bank
+DOMAIN-SUFFIX,hangseng.com         # 官网及个人银行
+DOMAIN-SUFFIX,hangseng.com.hk      # 备用 (汇丰自持, 无 Web)
+# 渣打银行 Standard Chartered
+DOMAIN-SUFFIX,standardchartered.com    # 全球官网
+DOMAIN-SUFFIX,standardchartered.com.hk # 香港官网及个人银行
+DOMAIN-SUFFIX,sc.com               # 渣打统一门户 (SC.com)
+# 中银香港 Bank of China (Hong Kong)
+DOMAIN-SUFFIX,bochk.com            # 官网及个人银行
+DOMAIN-SUFFIX,bochkonline.com      # 网上银行
+DOMAIN-SUFFIX,bocgroup.com         # 中银集团
+DOMAIN-SUFFIX,bochk.com.hk         # (备用)
+DOMAIN-SUFFIX,boc.com.hk           # 中银香港 (NS=imsbiz, 防御注册/无 Web)
+DOMAIN-SUFFIX,bankofchina.com      # 中国银行 (NS 自持)
+DOMAIN-SUFFIX,bank-of-china.com    # 中国银行 (NS 自持 + 专属 MX)
+DOMAIN-SUFFIX,boc.cn               # 中国银行中国官网 (NS 自持)
+DOMAIN-SUFFIX,boci.com.hk          # 中银国际 (MX=mail.bochk.com)
+DOMAIN-SUFFIX,bocpt.com            # 中银保诚信托 (BOCPT)
+
+# ===== 香港本地传统银行 =====
+# 东亚银行 Bank of East Asia
+DOMAIN-SUFFIX,hkbea.com
+DOMAIN-SUFFIX,hkbea.com.hk         # 备用 (NS=imsbiz, 归属待证实)
+# 星展银行 (香港) DBS
+DOMAIN-SUFFIX,dbs.com.hk
+DOMAIN-SUFFIX,dbs.com
+DOMAIN-SUFFIX,dbsbank.com
+DOMAIN-SUFFIX,dbs.com.sg
+# 花旗银行 (香港) Citibank
+DOMAIN-SUFFIX,citibank.com.hk
+DOMAIN-SUFFIX,citibank.com
+DOMAIN-SUFFIX,citi.com
+DOMAIN-SUFFIX,citigroup.com
+DOMAIN-SUFFIX,citibank.co.uk       # 英国官网 (超出香港范围, 视需求保留)
+DOMAIN-SUFFIX,thankyou.com         # 全球积分兑换 (CAA/Citi 自持)
+DOMAIN-SUFFIX,citiretailservices.com # 零售合作服务 (CAA/Citi 自持)
+# 华侨银行 (香港) OCBC (原华侨永亨)
+DOMAIN-SUFFIX,ocbc.com.hk
+DOMAIN-SUFFIX,ocbc.com
+DOMAIN-SUFFIX,ocbcwhhk.com         # OCBC Wing Hang HK
+# 大新银行 Dah Sing Bank
+DOMAIN-SUFFIX,dahsing.com
+DOMAIN-SUFFIX,dahsingbank.com.hk
+# 创兴银行 Chong Hing Bank
+DOMAIN-SUFFIX,chbank.com
+DOMAIN-SUFFIX,chonghing.com        # (MX=Google Workspace, 归属待确认)
+# 上海商业银行 Shanghai Commercial Bank
+DOMAIN-SUFFIX,shacombank.com.hk    # 官网 (官方主域, 已核实)
+DOMAIN-SUFFIX,shacom.com.hk        # 备用 (MX=netvigator, 无 Web)
+# 集友银行 Chiyu Banking
+DOMAIN-SUFFIX,chiyubank.com
+# 南洋商业银行 Nanyang Commercial Bank
+DOMAIN-SUFFIX,ncb.com.hk
+# 招商永隆银行 CMB Wing Lung Bank
+DOMAIN-SUFFIX,winglungbank.com
+DOMAIN-SUFFIX,cmbwinglungbank.com
+DOMAIN-SUFFIX,cmbchina.com
+# 富邦银行 (香港) Fubon Bank
+DOMAIN-SUFFIX,fubonbank.com.hk
+DOMAIN-SUFFIX,fubon.com
+# 大众银行 (香港) Public Bank
+DOMAIN-SUFFIX,publicbank.com.hk
+DOMAIN-SUFFIX,publicbank.com.my    # 马来西亚母行 (超出香港范围)
+# 大华银行 (香港) UOB
+DOMAIN-SUFFIX,uob.com.hk
+DOMAIN-SUFFIX,uobgroup.com
+DOMAIN-SUFFIX,uob.com
+# 新加坡银行 Bank of Singapore
+DOMAIN-SUFFIX,bankofsingapore.com
+# 大生银行 Tai Sang Bank
+DOMAIN-SUFFIX,taisangbank.com.hk   # 官网 (维基百科来源, NS=hkbn)
+# 大有银行 Tai Yau Bank
+DOMAIN-SUFFIX,tybhk.com.hk         # 官网 (维基百科来源, NS=HKDNR)
+
+# ===== 中资银行 (在港分行 / 子行) =====
+# 中信银行国际 China CITIC Bank International
+DOMAIN-SUFFIX,cncbinternational.com
+DOMAIN-SUFFIX,cncbinternational.com.hk
+# 交通银行 (香港) Bank of Communications
+DOMAIN-SUFFIX,bankcomm.com.hk
+DOMAIN-SUFFIX,bankcomm.com
+DOMAIN-SUFFIX,hk.bankcomm.com       # 交银香港
+# 工银亚洲 ICBC (Asia)
+DOMAIN-SUFFIX,icbcasia.com
+DOMAIN-SUFFIX,icbc.com.cn
+DOMAIN-SUFFIX,icbc.com              # ICBC (MX=M365 + 域名验证; NS=Cloudflare)
+# 建行亚洲 CCB (Asia)
+DOMAIN-SUFFIX,ccbasia.com
+DOMAIN-SUFFIX,asia.ccb.com          # 建行亚洲
+DOMAIN-SUFFIX,ccb.com
+# 中国农业银行
+DOMAIN-SUFFIX,abchina.com
+DOMAIN-SUFFIX,abchina.com.cn        # NS=abchina.com.cn, 农行自持
+# 招商银行 (香港分行)
+DOMAIN-SUFFIX,hk.cmbchina.com
+# 民生银行 (香港分行)
+DOMAIN-SUFFIX,hk.cmbc.com.cn
+# 光大银行 (香港分行)
+DOMAIN-SUFFIX,hkg.cebbank.com
+DOMAIN-SUFFIX,cebbank.com.hk
+
+# ===== 数字银行 (原虚拟银行, 共 8 家) =====
+# 众安银行 ZA Bank
+DOMAIN-SUFFIX,za.group
+DOMAIN-SUFFIX,bank.za.group
+DOMAIN-SUFFIX,zabank.com            # 302 跳转至 bank.za.group (在用)
+DOMAIN-SUFFIX,zajourney.com
+DOMAIN-SUFFIX,zafinsvc.com
+# Mox Bank (渣打旗下)
+DOMAIN-SUFFIX,mox.com
+DOMAIN-SUFFIX,mox.com.hk            # (注册商 CSC, 防御注册)
+# 汇立银行 WeLab Bank
+DOMAIN-SUFFIX,welab.bank
+# 理慧银行 livi bank
+DOMAIN-SUFFIX,livibank.com
+# 富融银行 Fusion Bank
+DOMAIN-SUFFIX,fusionbank.com
+# 蚂蚁银行 (香港) Ant Bank
+DOMAIN-SUFFIX,antbank.hk
+# 大象银行 EleBank (原天星银行 Airstar)
+DOMAIN-SUFFIX,elebank.com           # 现官网
+DOMAIN-SUFFIX,airstarbank.com       # 旧域名 (保留)
+# 平安数字银行 PAOB (原平安壹账通银行)
+DOMAIN-SUFFIX,paob.com.hk
+
+# ===== 电子钱包 / 支付 =====
+# AlipayHK 支付宝香港
+DOMAIN-SUFFIX,alipayhk.com
+DOMAIN-SUFFIX,alipay.hk
+DOMAIN-SUFFIX,alipayobjects.com     # 支付宝静态资源 (全球)
+# PayMe (汇丰)
+DOMAIN-SUFFIX,payme.hsbc.com.hk     # PayMe 官网 (payme.com.hk 不存在)
+# Tap & Go 拍住赏 (HKT)
+DOMAIN-SUFFIX,tapngo.com.hk         # 现官网
+DOMAIN-SUFFIX,tapandgo.com.hk       # 备用 (MX=netvigator, HKT 网络)
+# 八达通 Octopus / O! ePay
+DOMAIN-SUFFIX,octopus.com.hk
+DOMAIN-SUFFIX,oepay.com.hk
+# 易赏钱 MoneyBack
+DOMAIN-SUFFIX,moneyback.com.hk
+# WeChat Pay HK
+DOMAIN-SUFFIX,wechatpay.com.hk      # 腾讯持有 (DNS 当前异常)
+DOMAIN-SUFFIX,wechatpay.hk          # 官方旧域名 (DNS 当前 SERVFAIL)
+DOMAIN-SUFFIX,hk.wechat.com
+
+# ===== 金融基建 / 清算 / 支付网络 =====
+DOMAIN-SUFFIX,hkma.gov.hk           # 香港金融管理局
+DOMAIN-SUFFIX,hkicl.com.hk          # 银行同业结算 (转数快 FPS)
+DOMAIN-SUFFIX,jetco.com.hk          # 银通
+DOMAIN-SUFFIX,eps.com.hk            # 易办事 EPS
+DOMAIN-SUFFIX,unionpayintl.com      # 银联国际
+DOMAIN-SUFFIX,unionpay.com          # 银联支付服务
+
+# ===== 行情 / 接口 (建议直连) =====
+DOMAIN,mds1a.trkd-hs.com            # 汇丰行情接口
+DOMAIN-SUFFIX,bochkapi.etnet.com.hk # 中银行情接口
+DOMAIN-SUFFIX,bochkapp01.etnet.com.hk # 中银行情接口
+
+# ===== 第三方组件 / CDN / 风控 / 3DS =====
+# 注意: 以下为宽泛域名, 可能命中非银行流量, 可按需删除
+DOMAIN-SUFFIX,vam-hk.cloud1.vv1865.com       # 汇丰云组件 (与 payme.hsbc.com.hk 同 NS)
+DOMAIN-SUFFIX,peakwbs.cloud1.vv1865.com      # 汇丰云组件
+DOMAIN-SUFFIX,cdnhsbcrhostorage.azureedge.net # HSBC Azure CDN
+DOMAIN-SUFFIX,liveperson.net                 # 在线客服系统
+DOMAIN-SUFFIX,lpsnmedia.net                  # 在线客服系统资源
+DOMAIN-SUFFIX,tealiumiq.com                  # 网站标签管理
+DOMAIN-SUFFIX,tags.tiqcdn.com                # 网站标签管理
+DOMAIN-SUFFIX,eum-appdynamics.com            # App 性能监控
+DOMAIN-SUFFIX,siteintercept.qualtrics.com    # 问卷调查
+DOMAIN-SUFFIX,online-metrix.net              # 风险识别
+DOMAIN-SUFFIX,ocsp.digicert.com              # SSL 证书验证
+DOMAIN-SUFFIX,mastercard.com                 # Mastercard 3DS 验证
+DOMAIN-SUFFIX,visa.com                       # Visa 3DS 验证
+DOMAIN-SUFFIX,openrice.com                   # OpenRice (银行 App 商户)
