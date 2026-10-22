@@ -1,0 +1,135 @@
+# ============================================================
+# PT-Extra-Domain —— 个人 PT 补充域名集 (最终版)
+# behavior: domain  |  format: text
+# 来源:
+#   1) 从 Tracker 列表/服务器分布截图提取, 全部经 DoH 验证
+#   2) RapidDNS 被动 DNS 抓到的相关子域
+#   3) 实测确认的别名域名
+# 说明:
+#   - 已剔除 NXDOMAIN: daijiao.cyou, hhanclub.top,
+#     hostmaster.discfan.net, imgcdn.discfan.net,
+#     ptcdn.discfan.net, sycdc.org.htpt.cc
+#   - hddolby 子域当前 DoH 返回 SERVFAIL, 但图中/被动 DNS 明确存在, 保留
+#   - category-pt.list 已收录的域名此处重复也无害 (同策略组)
+# 最后更新: 2026-04-02
+# ============================================================
+
+# ===== 一、截图中的 Tracker / 服务器域名 (已验证) =====
++.agsvpt.cn
++.agsvpt.trackers.work
++.anime-no-index.com
++.chdbits.xyz
++.cinefiles.info
++.discfan.xyz
++.gamegamept.com
++.hdsky.me
++.hhan.club
++.hhanclub.net
++.htpt.cc
++.ilovelemonhd.me
++.keepfrds.com
++.leaves.red
++.m-team.cc
++.m-team.io
++.okpt.net
++.on.springsunday.net
++.ourbits.club
++.pt.soulvoice.club
++.ptchdbits.co
++.pterclub.net
++.ptl.gs
++.ptsbao.club
++.qingwa.pro
++.qingwapt.com
++.qingwapt.org
++.rainbowisland.co
++.relay01.ptl.gs
++.t.audiences.me
++.t.hddolby.com
++.t.ubits.club
++.totheglory.im
++.tracker-public.tjupt.org
++.tracker.agsvpt.cn
++.tracker.cinefiles.info
++.tracker.hdsky.me
++.tracker.hhan.club
++.tracker.hhanclub.net
++.tracker.keepfrds.com
++.tracker.leaves.red
++.tracker.m-team.cc
++.tracker.ptchdbits.co
++.tracker.pterclub.com
++.tracker.pterclub.net
++.tracker.qingwa.pro
++.tracker.qingwapt.com
++.tracker.qingwapt.org
++.tracker.rainbowisland.co
++.tracker.totheglory.im
++.tracker.zhuque.in
++.tracker01.ilovelemonhd.me
++.tracker2.leaves.red
++.tracker3.leaves.red
++.www.gamegamept.com
++.www.htpt.cc
++.www.okpt.net
++.xingtan.one
+
+# ===== 二、RapidDNS 抓到的相关子域 =====
++.audiences.me
++.cachefly.discfan.net
++.chat.ptsbao.club
++.discfan.net
++.hddolby.com
++.images.keepfrds.com
++.img.discfan.net
++.img.hdsky.me
++.img.m-team.cc
++.kp.m-team.cc
++.m.hdsky.me
++.mail.hddolby.com
++.momentpt.top
++.monikadesign.uk
++.oldtoons.world
++.on6.springsunday.net
++.pt.keepfrds.com
++.pt.m-team.cc
++.ptlgs.org
++.pttracker6.tjupt.org
++.pttrackertju.tjupt.org
++.s1.discfan.net
++.soulvoice.club
++.springsunday.net
++.t.hdsky.me
++.t.ptsbao.club
++.test.hddolby.com
++.tjupt.org
++.tp.m-team.cc
++.tracker-campus.tjupt.org
++.tu.totheglory.im
++.ubits.club
++.v.ptsbao.club
++.wiki.m-team.cc
++.www.discfan.net
++.www.hddolby.com
++.www.hdsky.me
++.www.keepfrds.com
++.www.m-team.cc
++.www.ptsbao.club
++.www.tjupt.org
++.www.totheglory.im
++.www.tracker.hdsky.me
++.zhuque.in
+
+# ===== 三、实测别名 / 补充域名 =====
++.agsvpt.com
++.static.ptl.gs
++.visitor.agsvpt.com
++.xingtan.xyz
+
+# ===== 已剔除 (NXDOMAIN) =====
+# daijiao.cyou
+# hhanclub.top
+# hostmaster.discfan.net
+# imgcdn.discfan.net
+# ptcdn.discfan.net
+# sycdc.org.htpt.cc
