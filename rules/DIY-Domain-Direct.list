@@ -1,0 +1,52 @@
+# ============================================================
+# DIY-Domain-Direct —— 自用域名直连
+# behavior: domain  |  format: text
+# 用途: 个人额外补充规则（小站/非大众站）
+# 说明: 同组(直连)重复已剔除; 与代理类重合的作为覆盖保留
+# 最后更新: 2026-04-02
+# ============================================================
+
+# ----- 新增（未与现有 byDEF 规则重合）-----
++.douyucdn.cn
++.douyucdn2.cn
++.moomoobull.com
++.www.kimi.com
++.91mjw.com
++.mmybt.com
++.justmysocks3.net
++.maiseed.com.cn
++.minebbs.com
++.51ssl.com
++.naixi.net
++.dl.steam.ksyna.com
++.gh-proxy.com
++.gitmirror.com
++.ghfast.top
+
+# ----- 覆盖保留（与代理类规则重合，但需要直连/代理优先）-----
+# 覆盖: cn!_domain
++.location.services.mozilla.com
+# 覆盖: cn!_domain
++.giffgaff.com
+# 覆盖: cn!_domain
++.mastercardservices.com
+# 覆盖: google_domain,cn!_domain
++.www.gstatic.cn
+# 覆盖: google_domain,cn!_domain
++.recaptcha.google.cn
+# 覆盖: cn!_domain
++.spaceship.com
+# 覆盖: cn!_domain
++.westerndigital.com
+# 覆盖: steam_domain,cn!_domain
++.steamcontent.com
+# 覆盖: cn!_domain
++.epicgames-download1-1251447533.file.myqcloud.com
+# 覆盖: cn!_domain
++.checkip.synology.com
+# 覆盖: cn!_domain
++.checkipv6.synology.com
+# 覆盖: cn!_domain
++.checkport.synology.com
+# 覆盖: cn!_domain
++.ddns.synology.com
