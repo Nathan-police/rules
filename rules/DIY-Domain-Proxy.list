@@ -1,0 +1,31 @@
+# ============================================================
+# DIY-Domain-Proxy —— 自用域名代理
+# behavior: domain  |  format: text
+# 用途: 个人额外补充规则（小站/非大众站）
+# 说明: 同组(代理)重复已剔除; 与直连类重合的作为覆盖保留
+# 最后更新: 2026-04-02
+# ============================================================
+
+# ----- 新增（未与现有 byDEF 规则重合）-----
++.dockerhub.com
++.ftp.afrinic.net
++.ftp.apnic.net
++.ftp.arin.net
++.ftp.lacnic.net
++.ftp.ripe.net
++.c.mi.com
++.v2rayssr.com
++.yecaoyun.com
++.hassbian.com
++.hdhive.com
++.www.scamalytics.com
++.www.gq685.com
++.nullbr.online
++.forums.unraid.net
++.moujiaozi.tech
++.ipleak.net
++.dorcelvision.com
++.dian115.com
++.re0.me
+
+# ----- 覆盖保留（与代理类规则重合，但需要直连/代理优先）-----
