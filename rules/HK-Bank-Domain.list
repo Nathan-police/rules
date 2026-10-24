@@ -98,6 +98,16 @@
 +.alipayhk.com
 +.alipay.hk
 +.alipayobjects.com
+# 支付宝主域 (含 hk./render./mobilegw. 等子域)
++.alipay.com
++.alipay.cn
+# 支付宝 DNS/CDN
++.alipaydns.com
++.alipayplus.com
+# 蚂蚁集团
++.antgroup.com
+# 蚂蚁金服
++.antfin.com
 +.payme.hsbc.com.hk
 +.tapngo.com.hk
 +.tapandgo.com.hk
