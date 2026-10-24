@@ -1,20 +1,9 @@
 # ============================================================
-# PT-Extra-Domain —— 个人 PT 补充域名集 (最终版)
+# PT-Extra-Domain
 # behavior: domain  |  format: text
-# 来源:
-#   1) 从 Tracker 列表/服务器分布截图提取, 全部经 DoH 验证
-#   2) RapidDNS 被动 DNS 抓到的相关子域
-#   3) 实测确认的别名域名
-# 说明:
-#   - 已剔除 NXDOMAIN: daijiao.cyou, hhanclub.top,
-#     hostmaster.discfan.net, imgcdn.discfan.net,
-#     ptcdn.discfan.net, sycdc.org.htpt.cc
-#   - hddolby 子域当前 DoH 返回 SERVFAIL, 但图中/被动 DNS 明确存在, 保留
-#   - category-pt.list 已收录的域名此处重复也无害 (同策略组)
 # 最后更新: 2026-04-02
 # ============================================================
 
-# ===== 一、截图中的 Tracker / 服务器域名 (已验证) =====
 +.agsvpt.cn
 +.agsvpt.trackers.work
 +.anime-no-index.com
@@ -73,8 +62,6 @@
 +.www.htpt.cc
 +.www.okpt.net
 +.xingtan.one
-
-# ===== 二、RapidDNS 抓到的相关子域 =====
 +.audiences.me
 +.cachefly.discfan.net
 +.chat.ptsbao.club
@@ -119,8 +106,6 @@
 +.www.totheglory.im
 +.www.tracker.hdsky.me
 +.zhuque.in
-
-# ===== 三、实测别名 / 补充域名 =====
 +.agsvpt.com
 +.static.ptl.gs
 +.visitor.agsvpt.com
