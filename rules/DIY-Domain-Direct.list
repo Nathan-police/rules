@@ -6,7 +6,7 @@
 # 最后更新: 2026-04-02
 # ============================================================
 
-# ----- 新增（未与现有 byDEF 规则重合）-----
+# ----- -----
 +.douyucdn.cn
 +.douyucdn2.cn
 +.moomoobull.com
@@ -23,30 +23,30 @@
 +.gitmirror.com
 +.ghfast.top
 
-# ----- 覆盖保留（与代理类规则重合，但需要直连/代理优先）-----
-# 覆盖: cn!_domain
-+.location.services.mozilla.com
-# 覆盖: cn!_domain
-+.giffgaff.com
-# 覆盖: cn!_domain
-+.mastercardservices.com
-# 覆盖: google_domain,cn!_domain
-+.www.gstatic.cn
-# 覆盖: google_domain,cn!_domain
-+.recaptcha.google.cn
-# 覆盖: cn!_domain
-+.spaceship.com
-# 覆盖: cn!_domain
-+.westerndigital.com
-# 覆盖: steam_domain,cn!_domain
-+.steamcontent.com
-# 覆盖: cn!_domain
-+.epicgames-download1-1251447533.file.myqcloud.com
-# 覆盖: cn!_domain
-+.checkip.synology.com
-# 覆盖: cn!_domain
-+.checkipv6.synology.com
-# 覆盖: cn!_domain
-+.checkport.synology.com
-# 覆盖: cn!_domain
-+.ddns.synology.com
+# # ----- 覆盖保留（与代理类规则重合，但需要直连/代理优先）-----
+# # 覆盖: cn!_domain
+# +.location.services.mozilla.com
+# # 覆盖: cn!_domain
+# +.giffgaff.com
+# # 覆盖: cn!_domain
+# +.mastercardservices.com
+# # 覆盖: google_domain,cn!_domain
+# +.www.gstatic.cn
+# # 覆盖: google_domain,cn!_domain
+# +.recaptcha.google.cn
+# # 覆盖: cn!_domain
+# +.spaceship.com
+# # 覆盖: cn!_domain
+# +.westerndigital.com
+# # 覆盖: steam_domain,cn!_domain
+# +.steamcontent.com
+# # 覆盖: cn!_domain
+# +.epicgames-download1-1251447533.file.myqcloud.com
+# # 覆盖: cn!_domain
+# +.checkip.synology.com
+# # 覆盖: cn!_domain
+# +.checkipv6.synology.com
+# # 覆盖: cn!_domain
+# +.checkport.synology.com
+# # 覆盖: cn!_domain
+# +.ddns.synology.com
